@@ -1,0 +1,48 @@
+@import url('http://fonts.cdnfonts.com/css/santana');
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #8cc6ff;
+    flex-direction: column;
+}
+
+.lightness {
+    position: absolute;
+    font-family: 'Santana', sans-serif;
+    font-size: 64px;
+    color: #fff;
+    animation: float 3s ease-in-out 2s infinite alternate;
+    filter: drop-shadow(1px 1px 4px #fff);
+    z-index: 1;
+}
+
+@keyframes float {
+    from {
+        padding-bottom: 0px;
+    }
+    to {
+        padding-bottom: 150px;
+    }
+}
+
+.below-shadow {
+    margin-top: 150px;
+    width: 350px;
+    height: 30px;
+    border-radius: 50%;
+    background: #3a3a3a4a;
+    filter: blur(10px);
+    animation: shadow-compress 3s ease-in-out 2s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes shadow-compress {
+    from {
+        width: 350px;
+    }
+    to {
+        width: 250px;
+    }
+}
